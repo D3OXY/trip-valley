@@ -27,6 +27,36 @@ a {
   text-decoration: none !important;
 }
 
-/* * {
-  box-sizing: border-box;
+/* .hero {
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 100%),
+    url("/hero-section.png");
+  background-size: cover;
+  height: 80vh;
 } */
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background: linear-gradient(to right,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 100%),
+      url("/hero-section.png");
+    background-size: cover;
+    height: 80vh;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 100%),
+      url("/hero-section.png");
+    background-size: cover;
+    height: 80vh;
+  }
+}

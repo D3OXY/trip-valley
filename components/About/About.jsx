@@ -15,8 +15,8 @@ function About() {
                     {/* </div> */}
                 </div>
 
-                <div className='w-[100%] md:w-[50%] flex items-center justify-center mt-12 md:mt-0 p-10' >
-                    <div className='w-full h-[370px] bg-[#08898F] flex justify-center items-center '>
+                <div className='hidden md:w-[50%] md:flex items-center justify-center mt-12 md:mt-0 p-10' >
+                    <div className='w-full h-[370px] bg-[#08898F] flex justify-center items-center rounded-3xl '>
                         <img src="/about-logo.png" alt="About Logo" />
                     </div>
                 </div>

@@ -6,6 +6,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
 import { Container } from 'react-bootstrap';
+import TwoCardRow from '../components/Card';
+import WhatsAppIcon from '../components/WhatsAppIcon';
+const cards = [
+  {
+    title: 'Card title',
+    text: 'Some quick example text to build on the card title and make up the bulk of the card content.',
+  },
+  {
+    title: 'Card title',
+    text: 'Some quick example text to build on the card title and make up the bulk of the card content.',
+  },
+]
 
 export default function Home() {
   return (
@@ -15,7 +27,9 @@ export default function Home() {
         <Hero />
         <Container>
           <About />
+          <TwoCardRow cards={cards} />
         </Container>
+        <WhatsAppIcon />
       </div>
     </>
   )

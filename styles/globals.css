@@ -12,8 +12,8 @@ font-family: 'Poppins', sans-serif; */
 
 html,
 body {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
   background-color: #F5F5F5 !important;
 }
 
@@ -56,7 +56,7 @@ a {
         rgba(0, 0, 0, 0) 100%),
       url("/hero-section-sm.jpg");
     background-size: cover;
-    height: 80vh;
+    height: 90vh;
   }
 }
 

@@ -30,8 +30,11 @@ a {
 @media only screen and (min-width: 768px) {
   .hero {
     background: linear-gradient(to right,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0.8) 5%,
+        rgba(0, 0, 0, 0.8) 5%,
+        rgba(0, 0, 0, 0.7) 10%,
+        rgba(0, 0, 0, 0.6) 25%,
+        rgba(0, 0, 0, 0.5) 50%,
         rgba(0, 0, 0, 0) 100%),
       url("/hero-section.png");
     background-size: cover;
@@ -42,10 +45,16 @@ a {
 @media only screen and (max-width: 767px) {
   .hero {
     background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 1) 0%,
+        /* rgba(0, 0, 0, 1) 0%,
         rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 100%), */
+        rgba(0, 0, 0, 0.8) 5%,
+        rgba(0, 0, 0, 0.8) 5%,
+        rgba(0, 0, 0, 0.7) 10%,
+        rgba(0, 0, 0, 0.6) 25%,
+        rgba(0, 0, 0, 0.5) 50%,
         rgba(0, 0, 0, 0) 100%),
-      url("/hero-section.png");
+      url("/hero-section-sm.jpg");
     background-size: cover;
     height: 80vh;
   }

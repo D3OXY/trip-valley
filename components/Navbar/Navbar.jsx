@@ -19,11 +19,11 @@ function NavbarComponent() {
                     {toggle ? <AiOutlineClose className='text-black text-4xl block md:hidden' onClick={() => { setToggle(!toggle) }} /> : <BiMenuAltRight className='text-black text-4xl block md:hidden' onClick={() => { setToggle(!toggle) }} />}
                 </div>
                 <div className=' w-[10%] md:w-[50%] hidden md:flex  justify-end items-center'>
-                    <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#home">Home</a>
-                    <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Packages</a>
-                    <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Resorts</a>
-                    <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#about">About Us</a>
-                    <a className=' font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ' href="#">Contact Us</a>
+                    <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#home">Home</a>
+                    <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Packages</a>
+                    <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Resorts</a>
+                    <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#about">About Us</a>
+                    <a className='button font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ease-in-out duration-200' href="#">Contact Us</a>
                 </div>
                 <div></div>
             </div>
@@ -38,8 +38,12 @@ export default NavbarComponent
 
 function DropDown() {
     return (
-        <div className='w-full bg-white ease-in-out'>
-            hi
+        <div className='w-full bg-white ease-in-out duration-200 flex flex-col items-center justify-center'>
+            <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#home">Home</a>
+            <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Packages</a>
+            <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Resorts</a>
+            <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#about">About Us</a>
+            <a className='button font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ease-in-out duration-200' href="#">Contact Us</a>
         </div>
     )
 }

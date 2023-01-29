@@ -13,7 +13,7 @@ function Hero() {
                         <HiLocationMarker className='text-white' />
                         <p className='text-white mb-0 font-Poppins font-normal'>Trikaripur, near Payyannur, Kannur</p>
                     </div>
-                    <a className=' bg-[#08898F] pr-6 md:pr-14 pl-6 md:pl-14 pt-3 md:pt-4 pb-3 md:pb-4 rounded-lg text-white font-Inter font-normal md:font-medium' href="/">Book Now</a>
+                    <a className='bg-[#08898F] pr-6 md:pr-14 pl-6 md:pl-14 pt-3 md:pt-4 pb-3 md:pb-4 rounded-lg text-white font-Inter font-normal md:font-medium' href="/">Book Now</a>
                 </div >
                 <div className='w-[50%] h-[100%] hidden '></div>
             </div >

@@ -31,10 +31,10 @@ function NavbarComponent() {
                         </NavDropdown> */}
                     </Nav>
                     <Nav className=' flex flex-row justify-center items-center '>
-                        <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Home</a>
+                        <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#home">Home</a>
                         <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Packages</a>
                         <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Resorts</a>
-                        <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#">About Us</a>
+                        <a className=' font-Poppins font-normal text-[#000000] m-[5px] ' href="#about">About Us</a>
                         <a className=' font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ' href="#">Contact Us</a>
                     </Nav>
                 </Navbar.Collapse>

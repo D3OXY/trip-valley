@@ -27,9 +27,9 @@ export default function Home() {
         <Hero />
         <Container>
           <About />
-          <TwoCardRow cards={cards} />
+          {/* <TwoCardRow cards={cards} /> */}
+          <WhatsAppIcon />
         </Container>
-        <WhatsAppIcon />
       </div>
     </>
   )

@@ -27,16 +27,6 @@ a {
   text-decoration: none !important;
 }
 
-/* .hero {
-  background: linear-gradient(to right,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 0) 100%),
-    url("/hero-section.png");
-  background-size: cover;
-  height: 80vh;
-} */
-
 @media only screen and (min-width: 768px) {
   .hero {
     background: linear-gradient(to right,
@@ -59,4 +49,22 @@ a {
     background-size: cover;
     height: 80vh;
   }
+}
+
+.text-underline::after {
+  display: block;
+  content: '';
+  width: 60%;
+  height: 3px;
+  margin-top: 4px;
+  border-radius: 7px;
+  background: #F5B963;
+  position: absolute;
+  /*   bottom: 0; */
+  left: 0;
+}
+
+.text-underline {
+  position: relative;
+  width: fit-content;
 }

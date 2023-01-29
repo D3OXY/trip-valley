@@ -28,8 +28,8 @@ export default function Home() {
         <Container>
           <About />
           {/* <TwoCardRow cards={cards} /> */}
-          <WhatsAppIcon />
         </Container>
+        <WhatsAppIcon />
       </div>
     </>
   )

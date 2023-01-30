@@ -16,7 +16,7 @@ function Footer() {
 
             <div className='flex flex-col md:flex-row items-center w-full mt-6'>
                 <h1 className='flex-1 text-left uppercase text-[#FFFFFF] font-Poppins font-semibold text-3xl '>Trip<span className='uppercase text-[#C5FBD8] '>VALLEY</span></h1>
-                <p className='flex-1 text-center text-[#909EA2] hover:underline cursor-pointer ' onClick={() => { window.location.href = 'https://deoxy.dev' }} >© 2023 TripValley</p>
+                <p className='flex-1 text-center text-[#909EA2] hover:underline cursor-pointer ' onClick={() => { window.location.href = 'https://deoxy.dev' }} >© 2023 TRIPVALLEY</p>
                 <div className='flex-1 text-right flex flex-row justify-end mb-6'>
                     <BsInstagram className='text-[#EAEAF1CC] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
                     <BsFacebook className='text-[#EAEAF1CC] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />

@@ -9,6 +9,7 @@ import { Container } from 'react-bootstrap';
 import TwoCardRow from '../components/Card';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import Resort from '../components/Resorts/Resort';
+import Package from '../components/Packages/Package';
 const cards = [
   {
     title: 'Card title',
@@ -29,6 +30,7 @@ export default function Home() {
         <Container>
           <About />
           <Resort />
+          <Package />
           {/* <TwoCardRow cards={cards} /> */}
         </Container>
         <WhatsAppIcon />

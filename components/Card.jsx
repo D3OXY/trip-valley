@@ -1,18 +1,17 @@
-import { Card, Row } from 'react-bootstrap';
 
-function TwoCardRow({ cards }) {
+function Card({ id, image, title }) {
     return (
-        <Row>
-            {cards.map((card, index) => (
-                <Card className='m-16 ' key={index} style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title>{card.title}</Card.Title>
-                        <Card.Text>{card.text}</Card.Text>
-                    </Card.Body>
-                </Card>
-            ))}
-        </Row>
+        <article key={id} className="flex items-center justify-center flex-col bg-white max-w-[300px] min-h-[156px] h-[100%] p-2 rounded-lg border-2 hover:border-4 border-black cursor-pointer ease-in-out duration-200">
+            {image && (
+                <div className="max-h-[156px]  overflow-hidden object-fill rounded-lg">
+                    <img src={image} alt={title} />
+                </div>
+            )}
+            <div className="flex items-center justify-center font-Poppins font-bold">
+                <p className="text-black mt-4 mb-0 ">{title}</p>
+            </div>
+        </article>
     );
 }
 
-export default TwoCardRow;
+export default Card;

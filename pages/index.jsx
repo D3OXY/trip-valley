@@ -8,6 +8,7 @@ import About from '../components/About/About';
 import { Container } from 'react-bootstrap';
 import TwoCardRow from '../components/Card';
 import WhatsAppIcon from '../components/WhatsAppIcon';
+import Resort from '../components/Resorts/Resort';
 const cards = [
   {
     title: 'Card title',
@@ -27,6 +28,7 @@ export default function Home() {
         <Hero />
         <Container>
           <About />
+          <Resort />
           {/* <TwoCardRow cards={cards} /> */}
         </Container>
         <WhatsAppIcon />

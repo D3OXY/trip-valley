@@ -10,6 +10,7 @@ import TwoCardRow from '../components/Card';
 import WhatsAppIcon from '../components/WhatsAppIcon';
 import Resort from '../components/Resorts/Resort';
 import Package from '../components/Packages/Package';
+import Footer from '../components/Footer/Footer';
 const cards = [
   {
     title: 'Card title',
@@ -33,6 +34,7 @@ export default function Home() {
           <Package />
           {/* <TwoCardRow cards={cards} /> */}
         </Container>
+        <Footer />
         <WhatsAppIcon />
       </div>
     </>

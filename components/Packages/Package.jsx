@@ -46,7 +46,7 @@ function Package() {
             <div className='mt-20 mb-20'>
                 <div className='' >
                     <h2 className='font-Poppins font-bold text-underline'>Our Packages</h2>
-                    <p className='font-Poppins font-normal mt-8 '>Our Itinerary</p>
+                    <p className='font-Poppins font-normal mt-8 '>Package Options Offered</p>
                 </div>
                 <div className='flex justify-center items-center '>
 
@@ -55,7 +55,7 @@ function Package() {
                             <Card key={id} title={title} image={image} />
                         ))}
 
-                        <div className="object-fill bg-cover bg-[url('/card-bg.jfif')] flex items-center justify-center flex-col bg-white max-w-[300px] min-h-[156px] h-[100%] rounded-lg border-2 hover:border-4 border-black cursor-pointer ease-in-out duration-200">
+                        <div className="object-fill bg-cover bg-[url('/card-bg.jfif')] flex items-center justify-center flex-col bg-white max-w-[300px] min-h-[156px] h-[100%] rounded-lg border-2 hover:border-4 hover:border-[#08898F] border-black cursor-pointer ease-in-out duration-200">
                             <div className="flex items-center justify-center font-Poppins font-extrabold text-xl">
                                 <p className="text-black mt-4 mb-0 ">Explore All</p>
                             </div>

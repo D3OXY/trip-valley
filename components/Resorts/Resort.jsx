@@ -5,7 +5,7 @@ import styles from "./Resort.module.css"
 const ResortData = [
     {
         id: 0,
-        title: 'Wayanad',
+        title: 'Wayanad.',
         image: 'https://s3-alpha-sig.figma.com/img/5a9f/e360/476aa6bb116bc324fa3ab90fba3fb58e?Expires=1676246400&Signature=KqRDjzPtYVjFmd7gp8AlnuwTGFn0JFP4oiywMfeP5vC34~VfCX9UkiWWKiyr5Jpla7zpOwlnWBERUcE6q5m1CoamvOthSERuQGY~Mvt31xrwuK7mv6FzJZxML5fQukeGy6cOrfQxSokZXaRIF3UtJ-kkpFFkP7iQWnRC~Ezh5c0Rht74HRJpHbgLcJiXxUiPkkEhI5yNTyGzV~hIaZkUTUFpKGkXEhIgh5YyDeF3PZlxUM~nyCi3w2ILJ2kkvNYnJE8vzLn3sUkX1YCZeY~kVPqTGFzMFCTLV~dZQQKbu1-bsF86PswNbjJevUBH1hZ~YTxpBAegPeKvkvrWxtW9Dg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
     },
     {
@@ -48,18 +48,23 @@ function Resort() {
                     <h2 className='font-Poppins font-bold text-underline'>Our Resort</h2>
                     <p className='font-Poppins font-normal mt-8 '>The Resorts We Offer</p>
                 </div>
-                <div className='flex justify-center items-center '>
+                <div className='flex justify-center items-center'>
 
                     <div className={styles.resort__container}>
                         {ResortData.map(({ id, title, image }) => (
                             <Card key={id} title={title} image={image} />
                         ))}
 
-                        <div className="object-fill bg-cover bg-[url('/card-bg.jfif')] flex items-center justify-center flex-col bg-white max-w-[300px] min-h-[156px] h-[100%] rounded-lg border-2 hover:border-4 hover:border-[#08898F] border-black cursor-pointer ease-in-out duration-200">
-                            <div className="flex items-center justify-center font-Poppins font-extrabold text-xl">
-                                <p className="text-black mt-4 mb-0 ">Explore All</p>
+                        <div className="card bg-black">
+                            <div className="card_image min-h-[156px] max-h-[156px]">
+                                <img src="/card-bg.jfif" alt="Explore All" />
+                                <div class="absolute inset-0 bg-black opacity-30"></div>
+                                <div className="absolute inset-0 card_title text-white flex flex-row justify-end items-end pr-4 font-Poppins font-bold text-xl opacity-100">
+                                    <p>Explore All</p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

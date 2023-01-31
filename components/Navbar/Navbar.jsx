@@ -5,9 +5,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BiMenuAltRight } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
+import ContactPopup from '../ContactPopup';
 
 function NavbarComponent() {
     const [toggle, setToggle] = useState(false)
+    const [show, setShow] = useState(false);
     return (
         <>
             <div className='w-full h-20 bg-white pl-2 md:pl-24 pr-2 md:pr-24 flex flex-row items-center'>
@@ -23,7 +25,8 @@ function NavbarComponent() {
                     <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Packages</a>
                     <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Resorts</a>
                     <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#about">About Us</a>
-                    <a className='button font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ease-in-out duration-200' href="#">Contact Us</a>
+                    <a className='button font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ease-in-out duration-200' href="#" onClick={() => setShow(!show)} >Contact Us</a>
+                    {show && <ContactPopup show={show} setShow={setShow} />}
                 </div>
                 <div></div>
             </div>

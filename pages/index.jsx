@@ -25,18 +25,16 @@ const cards = [
 export default function Home() {
   return (
     <>
-      <div>
-        <Navbar />
-        <Hero />
-        <Container>
-          <About />
-          <Resort />
-          <Package />
-          {/* <TwoCardRow cards={cards} /> */}
-        </Container>
-        <Footer />
-        <WhatsAppIcon />
-      </div>
+      <Navbar />
+      <Hero />
+      <Container>
+        <About />
+        <Resort />
+        <Package />
+        {/* <TwoCardRow cards={cards} /> */}
+      </Container>
+      <Footer />
+      <WhatsAppIcon />
     </>
   )
 }

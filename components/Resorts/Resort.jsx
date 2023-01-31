@@ -1,11 +1,7 @@
 import React from 'react'
 import Card from '../Card'
 import styles from "./Resort.module.css"
-//import data.json
 import data from '../data.json'
-
-const ResortData = data.resorts
-console.log(ResortData)
 
 function Resort() {
     return (

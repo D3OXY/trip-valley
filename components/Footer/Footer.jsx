@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsInstagram, BsFacebook, BsWhatsapp } from 'react-icons/bs';
+import { BsInstagram, BsFacebook, BsWhatsapp, BsTelephone } from 'react-icons/bs';
 
 function Footer() {
     return (
@@ -21,6 +21,7 @@ function Footer() {
                     <BsInstagram className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
                     <BsFacebook className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
                     <BsWhatsapp className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
+                    <BsTelephone className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
                 </div>
             </div>
         </div>

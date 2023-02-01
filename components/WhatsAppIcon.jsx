@@ -27,7 +27,7 @@ function WhatsAppIcon() {
                         }}
                         className='cursor-pointer hover:p-2 hover:bg-[#08898F] hover:text-white rounded-full ease-in-out duration-200'
                         onClick={() => {
-                            window.open('https://wa.me/919447777777');
+                            window.open('https://wa.me/918129387797');
                         }}
                     />
                 </>

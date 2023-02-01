@@ -26,7 +26,28 @@
         },
         {
             "name": "Kulukkumala",
-            "image": "https://s3-alpha-sig.figma.com/img/3951/f742/a72c34f4bc8d8315dbea3e13ee277bc9?Expires=1676246400&Signature=IrDMJvQ3x4~BPOvL5D2oId6L8CYtEzpYYFOamqjr3JnLmnmenFDliVA27RVbjmwiNZyutsQ8gA4VaOZ7Il7O2PLroEfkV9tEkdPz3TE4PTd0gVmN6HSUUc8RE6NHG~IlNOttV1kQzFdhfZ1ajKHrT-PNEgkJNMRUbEFZK9qTjdeIsp1LCyPzNtfobel0Q-LYaEei26lIuD2hLIrVX~9sY0tRXQ3puvZgMqItXxVx0q4FFD-Sqy96LbU45WMsmwqFtOfP2-bCARHJTLGrkDXPgQJpv1oY~KJlo16KCgQsJmR9kuXr5HSuAb3cEuDkFMMdxGZ2qLrHiLsTyAwZRKZl2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            "thumbnails": "https://s3-alpha-sig.figma.com/img/3951/f742/a72c34f4bc8d8315dbea3e13ee277bc9?Expires=1676246400&Signature=IrDMJvQ3x4~BPOvL5D2oId6L8CYtEzpYYFOamqjr3JnLmnmenFDliVA27RVbjmwiNZyutsQ8gA4VaOZ7Il7O2PLroEfkV9tEkdPz3TE4PTd0gVmN6HSUUc8RE6NHG~IlNOttV1kQzFdhfZ1ajKHrT-PNEgkJNMRUbEFZK9qTjdeIsp1LCyPzNtfobel0Q-LYaEei26lIuD2hLIrVX~9sY0tRXQ3puvZgMqItXxVx0q4FFD-Sqy96LbU45WMsmwqFtOfP2-bCARHJTLGrkDXPgQJpv1oY~KJlo16KCgQsJmR9kuXr5HSuAb3cEuDkFMMdxGZ2qLrHiLsTyAwZRKZl2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+            "description": "BPOvL5D2oId6L8CYtEzpYYFOamqjr3JnLmnmenFDliVA27RVbjmwiNZyutsQ8gA4VaOZ7Il7O2PLroEfkV9tEkdPz3TE4PTd0gVmN6HSUUc8RE6NHG",
+            "prices": [
+                {
+                    "name": "For Bachelor",
+                    "price": "Rs. 5000"
+                },
+                {
+                    "name": "For Couple",
+                    "price": "Rs. 10000"
+                }
+            ],
+            "CheckIn": "12:00 PM",
+            "CheckOut": "12:00 PM",
+            "images": [
+                {
+                    "image": "https://s3-alpha-sig.figma.com/img/3951/f742/a72c34f4bc8d8315dbea3e13ee277bc9?Expires=1676246400&Signature=IrDMJvQ3x4~BPOvL5D2oId6L8CYtEzpYYFOamqjr3JnLmnmenFDliVA27RVbjmwiNZyutsQ8gA4VaOZ7Il7O2PLroEfkV9tEkdPz3TE4PTd0gVmN6HSUUc8RE6NHG~IlNOttV1kQzFdhfZ1ajKHrT-PNEgkJNMRUbEFZK9qTjdeIsp1LCyPzNtfobel0Q-LYaEei26lIuD2hLIrVX~9sY0tRXQ3puvZgMqItXxVx0q4FFD-Sqy96LbU45WMsmwqFtOfP2-bCARHJTLGrkDXPgQJpv1oY~KJlo16KCgQsJmR9kuXr5HSuAb3cEuDkFMMdxGZ2qLrHiLsTyAwZRKZl2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                },
+                {
+                    "image": "https://s3-alpha-sig.figma.com/img/3951/f742/a72c34f4bc8d8315dbea3e13ee277bc9?Expires=1676246400&Signature=IrDMJvQ3x4~BPOvL5D2oId6L8CYtEzpYYFOamqjr3JnLmnmenFDliVA27RVbjmwiNZyutsQ8gA4VaOZ7Il7O2PLroEfkV9tEkdPz3TE4PTd0gVmN6HSUUc8RE6NHG~IlNOttV1kQzFdhfZ1ajKHrT-PNEgkJNMRUbEFZK9qTjdeIsp1LCyPzNtfobel0Q-LYaEei26lIuD2hLIrVX~9sY0tRXQ3puvZgMqItXxVx0q4FFD-Sqy96LbU45WMsmwqFtOfP2-bCARHJTLGrkDXPgQJpv1oY~KJlo16KCgQsJmR9kuXr5HSuAb3cEuDkFMMdxGZ2qLrHiLsTyAwZRKZl2A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                }
+            ]
         }
     ],
     "packages": [

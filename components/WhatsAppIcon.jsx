@@ -12,8 +12,8 @@ function WhatsAppIcon() {
                         src={'/phone1.png'}
                         alt='Phone Icon'
                         style={{
-                            width: '60px',
-                            height: '60px',
+                            width: '50px',
+                            height: '50px',
                         }}
                         className='cursor-pointer hover:p-2 hover:bg-[#08898F] hover:text-white rounded-full ease-in-out duration-200'
                         onClick={() => setShow(!show)}
@@ -22,8 +22,8 @@ function WhatsAppIcon() {
                         src={'/whatsapp.svg'}
                         alt='WhatsApp Icon'
                         style={{
-                            width: '70px',
-                            height: '70px',
+                            width: '50px',
+                            height: '50px',
                         }}
                         className='cursor-pointer hover:p-2 hover:bg-[#08898F] hover:text-white rounded-full ease-in-out duration-200'
                         onClick={() => {

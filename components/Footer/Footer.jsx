@@ -12,7 +12,7 @@ function Footer() {
                 <a className='m-6 text-[#C5FBD8] ' href="#about">Contact Us</a>
             </div>
 
-            <div class="w-full border-t border-[#346769] "></div>
+            <div className="w-full border-t border-[#346769] "></div>
 
             <div className='flex flex-col md:flex-row items-center w-full mt-6'>
                 <h1 className='flex-1 text-left uppercase text-[#FFFFFF] font-Poppins font-semibold text-3xl '>Trip<span className='uppercase text-[#C5FBD8] '>VALLEY</span></h1>

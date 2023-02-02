@@ -14,9 +14,12 @@ function Package() {
                 <div className='flex justify-center items-center '>
 
                     <div className={styles.package__container}>
-                        {data.packages.map(({ name, image }, id) => (
-                            <Card key={id} name={name} image={image} />
-                        ))}
+                        {data.packages.map(({ name, image }, id) => {
+                            if (id < 4) {
+                                return <Card key={id} name={name} image={image} />
+                            }
+                            return null;
+                        })}
 
                         <div className="card bg-black">
                             <div className="card_image min-h-[156px] max-h-[156px]">

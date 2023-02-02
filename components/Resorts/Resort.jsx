@@ -14,9 +14,12 @@ function Resort() {
                 <div className='flex justify-center items-center'>
 
                     <div className={styles.resort__container}>
-                        {data.resorts?.map(({ name, image }, id) => (
-                            <Card key={id} name={name} image={image} />
-                        ))}
+                        {data.resorts?.map(({ name, image }, id) => {
+                            if (id < 4) {
+                                return <Card key={id} name={name} image={image} />
+                            }
+                            return null;
+                        })}
 
                         <div className="card bg-black">
                             <div className="card_image min-h-[156px] max-h-[156px]">

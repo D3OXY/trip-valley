@@ -1,7 +1,7 @@
 
-function Card({ id, image, name }) {
+function Card({ image, name }) {
     return (
-        <article key={id}>
+        <article>
             <div className="card bg-black">
                 <div className="card_image min-h-[156px] max-h-[156px]">
                     <img src={image} alt={name} />

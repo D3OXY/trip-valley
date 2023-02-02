@@ -15,7 +15,7 @@ function Package() {
 
                     <div className={styles.package__container}>
                         {data.packages.map(({ name, image }, id) => (
-                            <Card id={id} name={name} image={image} />
+                            <Card key={id} name={name} image={image} />
                         ))}
 
                         <div className="card bg-black">

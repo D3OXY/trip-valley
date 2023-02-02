@@ -15,7 +15,7 @@ function Resort() {
 
                     <div className={styles.resort__container}>
                         {data.resorts?.map(({ name, image }, id) => (
-                            <Card id={id} name={name} image={image} />
+                            <Card key={id} name={name} image={image} />
                         ))}
 
                         <div className="card bg-black">

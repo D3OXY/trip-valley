@@ -26,7 +26,7 @@ function Auth() {
         try {
             await login(formData.email, formData.password)
             console.log("🚀 ~ file: auth.jsx:25 ~ handleSubmit ~ try ~ currentUser", currentUser)
-            // router.push('/admin')
+            router.push('/admin')
         } catch (error) {
             console.log("🚀 ~ file: auth.jsx:26 ~ handleSubmit ~ error", error)
             setError(error.message);

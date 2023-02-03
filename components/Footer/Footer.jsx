@@ -18,10 +18,10 @@ function Footer() {
                 <h1 className='flex-1 text-left uppercase text-[#FFFFFF] font-Poppins font-semibold text-3xl '>Trip<span className='uppercase text-[#C5FBD8] '>VALLEY</span></h1>
                 <p className='flex-1 text-center text-[#909EA2] hover:text-[#08898F] hover:underline cursor-pointer ' onClick={() => { window.location.href = 'https://deoxy.dev' }} >© 2023 TRIPVALLEY</p>
                 <div className='flex-1 text-right flex flex-row justify-end mb-6'>
-                    <BsInstagram className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
-                    <BsFacebook className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
-                    <BsWhatsapp className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
-                    <BsTelephone className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:text-4xl cursor-pointer ease-in-out duration-200' />
+                    <BsInstagram className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:scale-[1.1] cursor-pointer ease-in-out duration-200' />
+                    <BsFacebook className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:scale-[1.1] cursor-pointer ease-in-out duration-200' />
+                    <BsWhatsapp className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:scale-[1.1] cursor-pointer ease-in-out duration-200' />
+                    <BsTelephone className='text-[#EAEAF1CC] hover:text-[#08898F] ml-2 mr-2 text-3xl hover:scale-[1.1] cursor-pointer ease-in-out duration-200' />
                 </div>
             </div>
         </div>

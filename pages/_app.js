@@ -7,7 +7,8 @@ function MyApp({ Component, pageProps }) {
       <AuthContextProvider>
         <Component {...pageProps} />
       </AuthContextProvider>
-    </>)
+    </>
+  )
 }
 
 export default MyApp

@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap'
 import Footer from '../../components/Footer/Footer'
 import NavbarComponent from '../../components/Navbar/Navbar'
 import Card from '../../components/Card'
-import data from '../../components/data.json'
 import WhatsAppIcon from '../../components/WhatsAppIcon'
+import data from '../../components/data.json'
 
 function Resorts() {
     return (

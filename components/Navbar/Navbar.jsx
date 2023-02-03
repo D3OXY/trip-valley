@@ -12,7 +12,7 @@ function NavbarComponent() {
     const [show, setShow] = useState(false);
     return (
         <>
-            <div className='w-full h-20 bg-white pl-2 md:pl-24 pr-2 md:pr-24 flex flex-row items-center'>
+            <div className='w-full h-20 bg-white px-2 md:px-24 flex flex-row items-center'>
                 <div className=' w-[90%] md:w-[50%] flex flex-row items-center'>
                     <img src="/nav-logo.svg" alt="Trip Valley Logo" />
                     <p className='mb-0 text-2xl font-Poppins font-extrabold text-[#1A3724] uppercase'>Trip <span className='text-[#08898F]' >Valley</span></p>

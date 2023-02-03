@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { useAuth } from "../../lib/AuthContext"
 import { useRouter } from 'next/router'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../lib/firebase'
 
 function Auth() {
     const router = useRouter()
@@ -21,18 +19,15 @@ function Auth() {
         e.preventDefault()
         console.log("🚀 ~ file: auth.jsx:23 ~ handleSubmit ~ currentUser", currentUser)
 
-        // Perform Firebase email and password authentication here
-
+        // Firebase email and password authentication
         try {
             await login(formData.email, formData.password)
-            console.log("🚀 ~ file: auth.jsx:25 ~ handleSubmit ~ try ~ currentUser", currentUser)
             router.push('/admin')
         } catch (error) {
-            console.log("🚀 ~ file: auth.jsx:26 ~ handleSubmit ~ error", error)
             setError(error.message);
         }
 
-        // Clear form data after successful login
+        // Reset form
         setFormData({
             email: '',
             password: '',

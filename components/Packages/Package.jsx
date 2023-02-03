@@ -13,23 +13,14 @@ function Package() {
                 </div>
                 <div className='flex justify-center items-center '>
 
-                    <div className={styles.package__container}>
+                    <div className="card__container">
                         {data.packages.map(({ name, image }, id) => {
                             if (id < 4) {
                                 return <Card key={id} name={name} image={image} />
                             }
                             return null;
                         })}
-
-                        <div className="card bg-black">
-                            <div className="card_image min-h-[156px] max-h-[156px]">
-                                <img src="/card-bg.jfif" alt="Explore All" />
-                                <div className="absolute inset-0 bg-black opacity-30"></div>
-                                <div className="absolute inset-0 card_title text-white flex flex-row justify-end items-end pr-4 font-Poppins font-bold text-xl opacity-100">
-                                    <p>Explore All</p>
-                                </div>
-                            </div>
-                        </div>
+                        <Card name="Explore All" image="/card-bg.jfif" />
                     </div>
                 </div>
             </div>

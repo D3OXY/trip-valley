@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from '../Card'
-import styles from "./Resort.module.css"
 import data from '../data.json'
 
 function Resort() {

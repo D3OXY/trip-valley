@@ -5,7 +5,6 @@ import NavbarComponent from '../../components/Navbar/Navbar'
 import Card from '../../components/Card'
 import data from '../../components/data.json'
 import WhatsAppIcon from '../../components/WhatsAppIcon'
-import styles from './Card.module.css'
 
 function Resorts() {
     return (

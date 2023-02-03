@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from '../Card'
-import styles from "./Package.module.css"
 import data from '../data.json'
 
 function Package() {

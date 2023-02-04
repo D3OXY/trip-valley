@@ -9,15 +9,10 @@ function ImageForm({ formData, setFormData }) {
             ...formData,
             images: [...formData.images, inputValue]
         });
-        // setFormData({
-        //     ...formData,
-        //     prices: [...formData.prices, { name: '', amount: '' }]
-        //   });
         setInputValue('');
     };
 
     const handleRemove = (index) => {
-        // setIncludes(includes.filter((tag, i) => i !== index));
         const images = [...formData.images];
         images.splice(index, 1);
         setFormData({ ...formData, images });

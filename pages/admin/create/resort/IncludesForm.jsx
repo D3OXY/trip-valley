@@ -9,15 +9,10 @@ function PricesForm({ formData, setFormData }) {
             ...formData,
             includes: [...formData.includes, inputValue]
         });
-        // setFormData({
-        //     ...formData,
-        //     prices: [...formData.prices, { name: '', amount: '' }]
-        //   });
-        setInputValue('hmmmm');
+        setInputValue('');
     };
 
     const handleRemove = (index) => {
-        // setIncludes(includes.filter((tag, i) => i !== index));
         const includes = [...formData.includes];
         includes.splice(index, 1);
         setFormData({ ...formData, includes });

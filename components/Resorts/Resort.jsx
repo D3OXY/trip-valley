@@ -1,8 +1,20 @@
-import React from 'react'
-import Card from '../Card'
-import data from '../data.json'
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import React, { useEffect, useState } from 'react';
+import { db, postToJSON } from "../../lib/firebase";
+import Card from '../Card';
 
 function Resort() {
+    const [resorts, setResorts] = useState([])
+    useEffect(() => {
+        getData()
+    }, [])
+    async function getData() {
+        let resorts = []
+        const qr = query(collection(db, "resorts"), orderBy("createdAt", "asc"));
+        resorts = await (await getDocs(qr)).docs.map(postToJSON);
+        setResorts(resorts)
+    }
+
     return (
         <section id='#resort'>
             <div className='mt-20 mb-20'>
@@ -13,13 +25,13 @@ function Resort() {
                 <div className='flex justify-center items-center'>
 
                     <div className="card__container">
-                        {data.resorts?.map(({ name, image }, id) => {
-                            if (id < 4) {
-                                return <Card key={id} name={name} image={image} />
+                        {resorts?.map((data, index) => {
+                            if (index < 4) {
+                                return <Card key={index} data={data} section="resorts" />
                             }
                             return null;
                         })}
-                        <Card name="Explore All" image="/card-bg.jfif" />
+                        <Card data={{ name: "Explore All", thumbnail: "/card-bg.jfif" }} section="resorts" />
 
                     </div>
                 </div>

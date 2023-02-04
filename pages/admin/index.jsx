@@ -5,18 +5,21 @@ import Footer from '../../components/Footer/Footer'
 import NavbarComponent from '../../components/Navbar/Navbar'
 import { useAuth } from '../../lib/AuthContext'
 import { ImBin } from 'react-icons/im'
-import data from "../../components/data.json"
 import { useRouter } from 'next/router'
 import { db, postToJSON } from "../../lib/firebase"
 import { collection, getDocs, doc, deleteDoc, query, orderBy } from "firebase/firestore"
 
 export async function getServerSideProps(context) {
     let resorts = []
-    const q = query(collection(db, "resorts"), orderBy("createdAt", "asc"));
-    resorts = await (await getDocs(q)).docs.map(postToJSON);
+    const qr = query(collection(db, "resorts"), orderBy("createdAt", "asc"));
+    resorts = await (await getDocs(qr)).docs.map(postToJSON);
+
+    let packages = []
+    const qp = query(collection(db, "packages"), orderBy("createdAt", "asc"));
+    packages = await (await getDocs(qp)).docs.map(postToJSON);
 
     return {
-        props: { resorts },
+        props: { resorts, packages },
     }
 }
 
@@ -24,6 +27,7 @@ function AdminDashboard(props) {
     const { logout } = useAuth()
     const router = useRouter()
     const [resorts, setResorts] = useState(props.resorts)
+    const [packages, setPackages] = useState(props.packages)
     console.log("🚀 ~ file: index.jsx:27 ~ AdminDashboard ~ newdata", resorts)
 
     return (
@@ -48,6 +52,7 @@ function AdminDashboard(props) {
                                     )
 
                                 })}
+                                {!resorts.length && <h1 className='text-center'>No Resorts Found</h1>}
                             </div>
                         </div>
                         <div className='my-2 text-2xl'>
@@ -56,12 +61,13 @@ function AdminDashboard(props) {
                                 <button onClick={() => router.push('/admin/create/package')} className='flex flex-row items-center justify-center p-4 bg-blue-600 rounded-lg hover:scale-105 font-bold text-sm ease-in-out duration-200'>+Add </button>
                             </div>
                             <div className='my-4 p-2 w-full'>
-                                {data.packages.map((tripPackage, index) => {
+                                {packages.map((tripPackage, index) => {
                                     return (
                                         <Card key={index} data={tripPackage} section="packages" router={router} />
                                     )
 
                                 })}
+                                {!packages.length && <h1 className='text-center'>No Packages Found</h1>}
                             </div>
                         </div>
                     </Container>
@@ -81,7 +87,7 @@ function Card({ data, section }) {
     const router = useRouter()
     return (
         <div className='m-2 p-3 border-2 border-black rounded-lg flex flex-row justify-between items-center w-full hover:scale-[0.98] ease-in-out duration-200 cursor-pointer'>
-            <h1 onClick={() => router.push(`/${section.toLowerCase()}/${data.name.toLowerCase()}`)} >{data.name}</h1>
+            <h1 onClick={() => router.push(`/${section.toLowerCase()}/${data.name.toLowerCase()}`)} >{data.name.replace(/-/g, ' ').charAt(0).toUpperCase() + data.name.slice(1)}</h1>
             <ImBin onClick={() => handleDelete(data.id, section, router)} className='w-14 h-14 p-2 rounded-lg bg-red-500 text-white hover:scale-95 ease-in-out duration-200 cursor-pointer' />
         </div>
     )

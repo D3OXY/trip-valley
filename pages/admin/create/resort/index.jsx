@@ -8,8 +8,8 @@ import DataForm from "./DataForm";
 import ImageForm from "./ImageForm";
 import PricesForm from "./PricesForm";
 import UploadFile from "../../../../components/UploadFile";
-import { db } from "../../../../lib/firebase"
-import { collection, addDoc, Timestamp } from 'firebase/firestore'
+import { db, postToJSON } from "../../../../lib/firebase"
+import { collection, addDoc, Timestamp, query, where, getDocs } from 'firebase/firestore'
 const defaultData = {
     name: '',
     description: '',
@@ -30,13 +30,18 @@ function CreatePage() {
         setError(null);
         e.preventDefault();
         if (!formData.prices.length) return setError('Please add at least one price');
-        if (!formData.days.images) return setError('Please add at least one image');
+        if (!formData.images) return setError('Please add at least one image');
         if (!formData.thumbnail.includes('https://')) return setError('Please add a valid thumbnail url');
-        console.log(formData);
+        //check if the name is already in the firebase database
+        const q = query(collection(db, "resorts"), where("name", "==", formData.name));
+        const resorts = await (await getDocs(q)).docs.map(postToJSON);
+        if (resorts.length) return setError('Resort with the name already exists');
+
+        // console.log(formData);
 
         try {
             await addDoc(collection(db, 'resorts'), {
-                name: formData.name,
+                name: formData.name.toLowerCase().replace(/ /g, '-'),
                 description: formData.description,
                 thumbnail: formData.thumbnail,
                 checkin: formData.checkin,

@@ -4,8 +4,8 @@ import NavbarComponent from '../../../../components/Navbar/Navbar'
 import Footer from '../../../../components/Footer/Footer'
 import { useRouter } from "next/router";
 import UploadFile from "../../../../components/UploadFile";
-import { db } from "../../../../lib/firebase"
-import { collection, addDoc, Timestamp } from 'firebase/firestore'
+import { db, postToJSON } from "../../../../lib/firebase"
+import { collection, addDoc, Timestamp, getDocs, where, query } from 'firebase/firestore'
 import DataForm from "./DataForm";
 import DaysForm from "./DaysForm";
 import ImageForm from "./ImageForm";
@@ -26,13 +26,18 @@ function CreatePage() {
         setError(null);
         e.preventDefault();
         if (!formData.days.length) return setError('Please add at least one days');
-        if (!formData.days.images) return setError('Please add at least one image');
+        if (!formData.images) return setError('Please add at least one image');
         if (!formData.thumbnail.includes('https://')) return setError('Please add a valid thumbnail url');
-        console.log(formData);
+        //check if the name is already in the firebase database
+        const q = query(collection(db, "packages"), where("name", "==", formData.name));
+        const packages = await (await getDocs(q)).docs.map(postToJSON);
+        if (packages.length) return setError('Package with the name already exists');
+
+        // console.log(formData);
 
         try {
-            await addDoc(collection(db, 'resorts'), {
-                name: formData.name,
+            await addDoc(collection(db, 'packages'), {
+                name: formData.name.toLowerCase().replace(/ /g, '-'),
                 description: formData.description,
                 thumbnail: formData.thumbnail,
                 days: formData.days,
@@ -45,7 +50,7 @@ function CreatePage() {
         }
 
         setFormData(defaultData);
-        router.push('/resorts/' + formData.name.toLowerCase().replace(/ /g, '-'));
+        router.push('/packages/' + formData.name.toLowerCase().replace(/ /g, '-'));
         setError(null);
     };
 

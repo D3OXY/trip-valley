@@ -16,7 +16,6 @@ function DataForm({ formData, setFormData }) {
                     onChange={handleChange}
                     placeholder="Resort Name"
                     className='border-2 border-gray-300 p-2 rounded-md m-2 w-full'
-                    required
                 />
             </div>
 

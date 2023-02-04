@@ -14,7 +14,7 @@ function DataForm({ formData, setFormData }) {
                     name='name'
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Resort Name"
+                    placeholder="Package Name"
                     className='border-2 border-gray-300 p-2 rounded-md m-2 w-full'
                     required
                 />
@@ -27,9 +27,8 @@ function DataForm({ formData, setFormData }) {
                     name='description'
                     value={formData.description}
                     onChange={handleChange}
-                    placeholder="Resort Description"
+                    placeholder="Package Description"
                     className='border-2 border-gray-300 p-2 rounded-md m-2 w-full'
-                    required
                 />
             </div>
 

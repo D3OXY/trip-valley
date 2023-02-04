@@ -25,7 +25,9 @@ function CreatePage() {
     const handleSubmit = async (e) => {
         setError(null);
         e.preventDefault();
-        if (!formData.prices.length) return setError('Please add at least one price');
+        if (!formData.days.length) return setError('Please add at least one days');
+        if (!formData.days.images) return setError('Please add at least one image');
+        if (!formData.thumbnail.includes('https://')) return setError('Please add a valid thumbnail url');
         console.log(formData);
 
         try {

@@ -1,0 +1,10 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write, update, delete: if false;
+      allow read, write, update, delete, create: if
+          request.auth.uid == "PS9b8nkNJoZrInGuKr7XkHpxqGH2";   
+    }
+  }
+}

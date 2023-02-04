@@ -10,7 +10,6 @@ import PricesForm from "./PricesForm";
 
 function CreatePage() {
     const router = useRouter();
-    const [includes, setIncludes] = useState([]);
     const [formData, setFormData] = useState({
         name: '',
         description: '',
@@ -21,48 +20,6 @@ function CreatePage() {
         includes: [],
         images: []
     });
-
-
-
-    const handlePriceChange = (index, event) => {
-        const { name, value } = event.target;
-        const prices = [...formData.prices];
-        prices[index][name] = value;
-        setFormData({ ...formData, prices });
-    };
-
-    const handleImageChange = (index, event) => {
-        const { value } = event.target;
-        const images = [...formData.images];
-        images[index] = value;
-        setFormData({ ...formData, images });
-    };
-
-    const addPrice = () => {
-        setFormData({
-            ...formData,
-            prices: [...formData.prices, { name: '', amount: '' }]
-        });
-    };
-
-    const addImage = () => {
-        setFormData({
-            ...formData,
-            images: [...formData.images, '']
-        });
-    };
-
-    const removePrice = (index) => {
-        const prices = [...formData.prices];
-        prices.splice(index, 1);
-        setFormData({ ...formData, prices });
-    };
-
-    const removeImage = (index) => {
-        const images = [...formData.images];
-        images.splice(index, 1);
-        setFormData({ ...formData, images });
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();

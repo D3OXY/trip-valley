@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 
 function AdminDashboard() {
     const { logout } = useAuth()
+    const router = useRouter()
     return (
         <>
             <AuthCheck>
@@ -24,7 +25,7 @@ function AdminDashboard() {
                         <div className='my-2 text-2xl w-full'>
                             <div className='flex flex-row items-center justify-between'>
                                 <h1 className='text-underline font-bold'>Resorts</h1>
-                                <button className='flex flex-row items-center justify-center p-4 bg-blue-600 rounded-lg hover:scale-105 font-bold text-sm ease-in-out duration-200'> <AiOutlinePlus />Add </button>
+                                <button onClick={() => router.push('/admin/create/resort')} className='flex flex-row items-center justify-center p-4 bg-blue-600 rounded-lg hover:scale-105 font-bold text-sm ease-in-out duration-200'> <AiOutlinePlus />Add </button>
                             </div>
                             <div className='my-4 p-2 w-full'>
                                 {data.resorts.map((item) => {
@@ -38,7 +39,7 @@ function AdminDashboard() {
                         <div className='my-2 text-2xl'>
                             <div className='flex flex-row items-center justify-between'>
                                 <h1 className='text-underline font-bold'>Packages</h1>
-                                <button className='flex flex-row items-center justify-center p-4 bg-blue-600 rounded-lg hover:scale-105 font-bold text-sm ease-in-out duration-200'> <AiOutlinePlus />Add </button>
+                                <button onClick={() => router.push('/admin/create/package')} className='flex flex-row items-center justify-center p-4 bg-blue-600 rounded-lg hover:scale-105 font-bold text-sm ease-in-out duration-200'> <AiOutlinePlus />Add </button>
                             </div>
                             <div className='my-4 p-2 w-full'>
                                 {data.packages.map((item) => {

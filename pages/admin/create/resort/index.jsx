@@ -8,6 +8,8 @@ import DataForm from "./DataForm";
 import ImageForm from "./ImageForm";
 import PricesForm from "./PricesForm";
 import UploadFile from "../../../../components/UploadFile";
+import { db } from "../../../../lib/firebase"
+import { collection, addDoc, Timestamp } from 'firebase/firestore'
 const defaultData = {
     name: '',
     description: '',
@@ -24,13 +26,31 @@ function CreatePage() {
     const [error, setError] = useState(null);
     const [formData, setFormData] = useState(defaultData);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         setError(null);
         e.preventDefault();
         if (!formData.prices.length) return setError('Please add at least one price');
         console.log(formData);
-        // setFormData(defaultData);
-        // router.push('/resorts/' + formData.name);
+
+        try {
+            await addDoc(collection(db, 'resorts'), {
+                name: formData.name,
+                description: formData.description,
+                thumbnail: formData.thumbnail,
+                checkin: formData.checkin,
+                checkout: formData.checkout,
+                prices: formData.prices,
+                includes: formData.includes,
+                images: formData.images,
+                createdAt: Timestamp.fromDate(new Date()),
+                updatedAt: Timestamp.fromDate(new Date()),
+            })
+        } catch (err) {
+            return alert(err)
+        }
+
+        setFormData(defaultData);
+        router.push('/resorts/' + formData.name.toLowerCase().replace(/ /g, '-'));
         setError(null);
     };
 

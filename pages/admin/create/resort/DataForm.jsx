@@ -6,7 +6,7 @@ function DataForm({ formData, setFormData }) {
         setFormData({ ...formData, [name]: value });
     };
     return (
-        <div className='p-2 border border-black w-[40rem] m-2'>
+        <div className='p-2 border border-black w-[20rem] md:w-[40rem] m-2'>
             <div className='flex flex-col m-2 items-start justify-center'>
                 <label htmlFor='name'>Name</label>
                 <input
@@ -22,7 +22,7 @@ function DataForm({ formData, setFormData }) {
 
             <div className='flex flex-col m-2 items-start justify-center'>
                 <label htmlFor='description'>Description</label>
-                <input
+                <textarea
                     type='text'
                     name='description'
                     value={formData.description}

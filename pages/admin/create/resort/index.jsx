@@ -40,7 +40,7 @@ function CreatePage() {
                 <NavbarComponent />
                 <div className='flex flex-col items-center justify-center font-Poppins font-semibold'>
                     <h1 className='text-lg md:text-3xl'>Create - Resort</h1>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className=" w-[20rem] md:w-[40rem]">
 
                         <DataForm formData={formData} setFormData={setFormData} />
                         <PricesForm formData={formData} setFormData={setFormData} />
@@ -50,7 +50,7 @@ function CreatePage() {
                             <button className='m-2 flex flex-row items-center justify-center p-4 bg-blue-600 rounded-lg hover:scale-105 font-bold text-md ease-in-out duration-200 text-white px-12 py-4'>Save</button>
                             {error && <p className="m-2 rounded-lg py-2 px-6 bg-red-500 text-white">{error}</p>}
                         </div>
-                        <div>
+                        <div className="overflow-hidden">
                             <h1>Raw Data</h1>
                             <pre>{JSON.stringify(formData, null, 2)}</pre>
                         </div>

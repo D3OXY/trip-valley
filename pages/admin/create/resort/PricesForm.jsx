@@ -20,16 +20,17 @@ function PricesForm({ formData, setFormData }) {
     }
 
     return (
-        <div className='p-2 border border-black w-[40rem] m-2'>
+        <div className='p-2 border border-black w-[20rem] md:w-[40rem] m-2'>
 
             <div className='flex flex-col m-2 items-start justify-center'>
 
                 <div className='flex flex-row items-center justify-center w-full'>
-                    <ul className='flex flex-row'>
+                    <ul className='flex flex-row overflow-scroll'>
                         {formData.prices.map((prices, index) => (
                             <div key={index} className="bg-gray-200 p-2 mr-2 mb-2">
                                 {prices.name + ' - ' + prices.amount}
                                 <button
+                                    type='button'
                                     onClick={() => handleRemove(index)}
                                     className="ml-2 text-xs text-red-500 hover:text-red-700"
                                 >
@@ -42,7 +43,7 @@ function PricesForm({ formData, setFormData }) {
                 <div className='flex flex-col items-start justify-center w-full'>
                     <div className='flex flex-row items-center justify-between w-full'>
                         <label htmlFor='prices-text'>Prices</label>
-                        <button onClick={() => handleAdd(inputValue)} className='p-2 bg-blue-600 rounded-lg text-white' >+ Add</button>
+                        <button type='button' onClick={() => handleAdd(inputValue)} className='p-2 bg-blue-600 rounded-lg text-white' >+ Add</button>
                     </div>
                     <input
                         type='text'

@@ -7,6 +7,7 @@ import { useAuth } from '../../lib/AuthContext'
 import { ImBin } from 'react-icons/im'
 import { AiOutlinePlus } from 'react-icons/ai'
 import data from "../../components/data.json"
+import { useRouter } from 'next/router'
 
 function AdminDashboard() {
     const { logout } = useAuth()
@@ -28,7 +29,7 @@ function AdminDashboard() {
                             <div className='my-4 p-2 w-full'>
                                 {data.resorts.map((item) => {
                                     return (
-                                        <Card name={item.name} />
+                                        <Card name={item.name} section="resorts" />
                                     )
 
                                 })}
@@ -42,7 +43,7 @@ function AdminDashboard() {
                             <div className='my-4 p-2 w-full'>
                                 {data.packages.map((item) => {
                                     return (
-                                        <Card name={item.name} />
+                                        <Card name={item.name} section="packages" />
                                     )
 
                                 })}
@@ -61,9 +62,10 @@ export default AdminDashboard
 
 
 
-function Card({ name }) {
+function Card({ name, section }) {
+    const router = useRouter()
     return (
-        <div className='m-2 p-3 border-2 border-black rounded-lg flex flex-row justify-between items-center w-full hover:scale-[0.98] ease-in-out duration-200'>
+        <div onClick={() => router.push(`/${section.toLowerCase()}/${name.toLowerCase()}`)} className='m-2 p-3 border-2 border-black rounded-lg flex flex-row justify-between items-center w-full hover:scale-[0.98] ease-in-out duration-200 cursor-pointer'>
             <h1>{name}</h1>
             <ImBin className='w-14 h-14 p-2 rounded-lg bg-red-500 text-white hover:scale-95 ease-in-out duration-200 cursor-pointer' />
         </div>

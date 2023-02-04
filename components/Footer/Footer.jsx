@@ -1,15 +1,16 @@
 import React from 'react'
 import { BsInstagram, BsFacebook, BsWhatsapp, BsTelephone } from 'react-icons/bs';
+import { useRouter } from 'next/router'
+
 
 function Footer() {
+    const router = useRouter()
     return (
         <div className='bg-[#0C1011] w-[100%] md:p-12 m-0 md:pl-28 md:pr-28 flex flex-col'>
             <div className='font-Poppins font-semibold flex flex-col md:flex-row items-center justify-center  '>
-                <a className='m-6 text-[#C5FBD8] ' href="#home">Home</a>
-                <a className='m-6 text-[#C5FBD8] ' href="#">Packages</a>
-                <a className='m-6 text-[#C5FBD8] ' href="#">Resorts</a>
-                <a className='m-6 text-[#C5FBD8] ' href="#about">About Us</a>
-                <a className='m-6 text-[#C5FBD8] ' href="#about">Contact Us</a>
+                <a onClick={() => router.push('/')} className='m-6 text-[#C5FBD8] ' href="#home">Home</a>
+                <a onClick={() => router.push('/packages')} className='m-6 text-[#C5FBD8] ' href="#">Packages</a>
+                <a onClick={() => router.push('/resorts')} className='m-6 text-[#C5FBD8] ' href="#">Resorts</a>
             </div>
 
             <div className="w-full border-t border-[#346769] "></div>

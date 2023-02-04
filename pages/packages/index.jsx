@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import Footer from '../../components/Footer/Footer'
 import NavbarComponent from '../../components/Navbar/Navbar'
 import WhatsAppIcon from '../../components/WhatsAppIcon'
 import Card from '../../components/Card'
 import data from '../../components/data.json'
+import { collection, getDocs, orderBy, query } from 'firebase/firestore'
+import { db, postToJSON } from '../../lib/firebase'
 
 function Packages() {
+    const [packages, setPackages] = useState([])
+    useEffect(() => {
+        getData()
+    }, [])
+    async function getData() {
+        let packages = []
+        const qp = query(collection(db, "packages"), orderBy("createdAt", "asc"));
+        packages = await (await getDocs(qp)).docs.map(postToJSON);
+        setPackages(packages)
+    }
+
     return (
         <>
             <NavbarComponent />
@@ -24,9 +37,10 @@ function Packages() {
                     <div className='mt-20 mb-20'>
                         <div className='flex justify-center items-center'>
                             <div className="card__container">
-                                {data.packages?.map(({ name, image }, id) => (
-                                    <Card key={id} name={name} image={image} />
-                                ))}
+                                {packages.map((data, index) => {
+                                    return <Card key={index} data={data} section="packages" />
+                                })}
+                                {!packages.length && <h1 className='text-black uppercase font-Poppins font-semibold text-5xl'>No Packages Found</h1>}
                             </div>
                         </div>
                     </div>

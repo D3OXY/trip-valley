@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import Footer from '../../components/Footer/Footer'
 import NavbarComponent from '../../components/Navbar/Navbar'
 import Card from '../../components/Card'
 import WhatsAppIcon from '../../components/WhatsAppIcon'
 import data from '../../components/data.json'
+import { collection, getDocs, orderBy, query } from 'firebase/firestore'
+import { db, postToJSON } from '../../lib/firebase'
 
 function Resorts() {
+    const [resorts, setResorts] = useState([])
+    useEffect(() => {
+        getData()
+    }, [])
+    async function getData() {
+        let resorts = []
+        const qr = query(collection(db, "resorts"), orderBy("createdAt", "asc"));
+        resorts = await (await getDocs(qr)).docs.map(postToJSON);
+        setResorts(resorts)
+    }
+
     return (
         <>
             <NavbarComponent />
@@ -24,9 +37,10 @@ function Resorts() {
                     <div className='mt-20 mb-20'>
                         <div className='flex justify-center items-center'>
                             <div className="card__container">
-                                {data.resorts?.map(({ name, image }, id) => (
-                                    <Card key={id} name={name} image={image} />
-                                ))}
+                                {resorts.map((data, index) => {
+                                    return <Card key={index} data={data} section="resorts" />
+                                })}
+                                {!resorts.length && <h1 className='text-black uppercase font-Poppins font-semibold text-5xl'>No Packages Found</h1>}
                             </div>
                         </div>
                     </div>

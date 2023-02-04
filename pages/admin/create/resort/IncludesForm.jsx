@@ -40,7 +40,7 @@ function PricesForm({ formData, setFormData }) {
                 <div className='flex flex-col items-start justify-center w-full'>
                     <div className='flex flex-row items-center justify-between w-full'>
                         <label htmlFor='includes'>Includes</label>
-                        <button onClick={() => handleAdd(inputValue)} className='p-2 bg-blue-600 rounded-lg' >+ Add</button>
+                        <button onClick={() => handleAdd(inputValue)} className='p-2 bg-blue-600 rounded-lg text-white' >+ Add</button>
                     </div>
                     <input
                         type='text'

@@ -10,6 +10,7 @@ function Auth() {
         password: '',
     })
     const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -17,7 +18,7 @@ function Auth() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log("🚀 ~ file: auth.jsx:23 ~ handleSubmit ~ currentUser", currentUser)
+        setLoading(true)
 
         // Firebase email and password authentication
         try {
@@ -25,13 +26,11 @@ function Auth() {
             router.push('/admin')
         } catch (error) {
             setError(error.message);
+            setLoading(false);
+            return;
         }
 
-        // Reset form
-        setFormData({
-            email: '',
-            password: '',
-        })
+        setLoading(false)
     }
 
     return (
@@ -74,8 +73,8 @@ function Auth() {
                             required
                         />
                     </div>
-                    <button className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
-                        Login
+                    <button disabled={loading} className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
+                        {loading ? "Loading..." : "Login"}
                     </button>
                 </form>
             </div>

@@ -7,6 +7,7 @@ import IncludesForm from "./IncludesForm";
 import DataForm from "./DataForm";
 import ImageForm from "./ImageForm";
 import PricesForm from "./PricesForm";
+import UploadFile from "../../../../components/UploadFile";
 const defaultData = {
     name: '',
     description: '',
@@ -54,6 +55,7 @@ function CreatePage() {
                             <pre>{JSON.stringify(formData, null, 2)}</pre>
                         </div>
                     </form>
+                    <UploadFile />
                 </div>
                 <Footer />
             </AuthCheck>

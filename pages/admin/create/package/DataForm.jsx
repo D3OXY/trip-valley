@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function DataForm({ formData, setFormData }) {
     const handleChange = (e) => {

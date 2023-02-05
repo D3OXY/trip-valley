@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import AuthCheck from '../../../../components/AuthCheck'
-import NavbarComponent from '../../../../components/Navbar/Navbar'
-import Footer from '../../../../components/Footer/Footer'
+import { addDoc, collection, getDocs, query, Timestamp, where } from 'firebase/firestore';
 import { useRouter } from "next/router";
+import React, { useState } from "react";
+import AuthCheck from '../../../../components/AuthCheck';
+import Footer from '../../../../components/Footer/Footer';
+import NavbarComponent from '../../../../components/Navbar/Navbar';
 import UploadFile from "../../../../components/UploadFile";
-import { db, postToJSON } from "../../../../lib/firebase"
-import { collection, addDoc, Timestamp, getDocs, where, query } from 'firebase/firestore'
+import { db, postToJSON } from "../../../../lib/firebase";
 import DataForm from "./DataForm";
 import DaysForm from "./DaysForm";
 import ImageForm from "./ImageForm";

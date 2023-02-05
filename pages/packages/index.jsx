@@ -1,11 +1,10 @@
+import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
+import Card from '../../components/Card'
 import Footer from '../../components/Footer/Footer'
 import NavbarComponent from '../../components/Navbar/Navbar'
 import WhatsAppIcon from '../../components/WhatsAppIcon'
-import Card from '../../components/Card'
-import data from '../../components/data.json'
-import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import { db, postToJSON } from '../../lib/firebase'
 
 function Packages() {

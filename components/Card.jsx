@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 function Card({ data, section }) {
     const router = useRouter();
     const [hover, setHover] = useState(false);
-    //replace(/-/g, ' ') is used to replace all the - with space
-    //charAt(0).toUpperCase() + data.name.slice(1) is used to capitalize the first letter of the string
     let name = data.name.replace(/-/g, ' ');
     name = name.charAt(0).toUpperCase() + name.slice(1);
     return (

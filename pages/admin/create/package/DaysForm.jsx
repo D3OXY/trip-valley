@@ -4,8 +4,8 @@ function DaysForm({ formData, setFormData }) {
     const [inputValue, setInputValue] = useState([]);
 
     const handleAdd = (inputValue) => {
-        if (!inputValue.title) return console.log('title');
-        if (!inputValue.description) return console.log('description');
+        if (!inputValue.title) return;
+        if (!inputValue.description) return;
         const updatedDescription = inputValue.description.replace(/\n/g, '<br />');
         setFormData({
             ...formData,

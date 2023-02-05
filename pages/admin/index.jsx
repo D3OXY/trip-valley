@@ -28,7 +28,6 @@ function AdminDashboard(props) {
     const router = useRouter()
     const [resorts, setResorts] = useState(props.resorts)
     const [packages, setPackages] = useState(props.packages)
-    console.log("🚀 ~ file: index.jsx:27 ~ AdminDashboard ~ newdata", resorts)
 
     return (
         <>

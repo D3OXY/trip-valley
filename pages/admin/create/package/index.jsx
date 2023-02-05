@@ -28,12 +28,10 @@ function CreatePage() {
         if (!formData.days.length) return setError('Please add at least one days');
         if (!formData.images) return setError('Please add at least one image');
         if (!formData.thumbnail.includes('https://')) return setError('Please add a valid thumbnail url');
-        //check if the name is already in the firebase database
+
         const q = query(collection(db, "packages"), where("name", "==", formData.name));
         const packages = await (await getDocs(q)).docs.map(postToJSON);
         if (packages.length) return setError('Package with the name already exists');
-
-        // console.log(formData);
 
         try {
             await addDoc(collection(db, 'packages'), {

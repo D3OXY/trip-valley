@@ -32,12 +32,10 @@ function CreatePage() {
         if (!formData.prices.length) return setError('Please add at least one price');
         if (!formData.images) return setError('Please add at least one image');
         if (!formData.thumbnail.includes('https://')) return setError('Please add a valid thumbnail url');
-        //check if the name is already in the firebase database
+
         const q = query(collection(db, "resorts"), where("name", "==", formData.name));
         const resorts = await (await getDocs(q)).docs.map(postToJSON);
         if (resorts.length) return setError('Resort with the name already exists');
-
-        // console.log(formData);
 
         try {
             await addDoc(collection(db, 'resorts'), {

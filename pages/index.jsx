@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import About from '../components/About/About';
 import Footer from '../components/Footer/Footer';
 import Hero from '../components/Hero/Hero';
-import Navbar from '../components/Navbar/Navbar';
+import NavbarComponent from '../components/Navbar/Navbar';
 import Package from '../components/Packages/Package';
 import Resort from '../components/Resorts/Resort';
 import WhatsAppIcon from '../components/WhatsAppIcon';
@@ -11,7 +11,7 @@ import WhatsAppIcon from '../components/WhatsAppIcon';
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <NavbarComponent />
       <Hero />
       <Container>
         <About />

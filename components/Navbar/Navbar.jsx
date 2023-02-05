@@ -1,8 +1,13 @@
-import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { AiOutlineClose } from 'react-icons/ai';
-import { BiMenuAltRight } from 'react-icons/bi';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { BiMenuAltRight } from 'react-icons/bi'
+import { AiOutlineClose } from 'react-icons/ai'
 import ContactPopup from '../ContactPopup';
+import { useRouter } from 'next/router'
+import Image from 'next/image';
 
 function NavbarComponent() {
     const router = useRouter()

@@ -16,7 +16,7 @@ export async function getStaticPaths() {
         }))
         return {
             paths,
-            fallback: false,
+            fallback: 'blocking',
         }
     }
 }
@@ -29,7 +29,8 @@ export async function getStaticProps({ params }) {
 
     if (data.length) {
         return {
-            props: { data }
+            props: { data },
+            revalidate: 5000,
         }
     } else {
         return {

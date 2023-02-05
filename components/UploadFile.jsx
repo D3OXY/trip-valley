@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { BsCameraFill } from 'react-icons/bs'
-import { storage } from "../lib/firebase";
-import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
+import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import React, { useState } from 'react';
+import { BsCameraFill } from 'react-icons/bs';
 import { v4 as uuidv4 } from 'uuid';
+import { storage } from "../lib/firebase";
 
 function UploadFile() {
     const [imgUrl, setImgUrl] = useState(null);

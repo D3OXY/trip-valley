@@ -1,10 +1,9 @@
+import { collection, getDocs, orderBy, query, where } from 'firebase/firestore'
 import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import Footer from '../../../components/Footer/Footer'
 import NavbarComponent from '../../../components/Navbar/Navbar'
 import WhatsAppIcon from '../../../components/WhatsAppIcon'
-import data from '../../../components/data.json'
-import { collection, getDocs, orderBy, query, where } from 'firebase/firestore'
 import { db, postToJSON } from '../../../lib/firebase'
 
 
@@ -17,7 +16,7 @@ export async function getStaticPaths() {
         }))
         return {
             paths,
-            fallback: false, // can also be true or 'blocking'
+            fallback: false,
         }
     }
 }
@@ -64,7 +63,6 @@ function Index(props) {
                         <h2 className='font-Poppins font-bold w-[90vw] md:w-[40vw] '>{data.description}</h2>
                     </div>
                     <div>
-                        {/* // // * Day Details */}
                         {data.days.map((day, index) => {
                             return (
                                 <div key={index} className='m-4 p-6 border-2 border-black w-[350px] md:w-[650px] rounded-lg flex flex-col items-center justify-center '>
@@ -81,12 +79,10 @@ function Index(props) {
 
                     </div>
                     <div className='min-w-[90vw] md:min-w-[50vw] max-w-[90vw] md:max-w-[50vw] mb-12'>
-                        {/* // todo add content */}
                     </div>
                     <div className='flex flex-col items-start justify-start w-[90vw] md:w-[70vw]'>
                         <h1 className='text-underline font-Poppins font-bold text-2xl'>Images</h1>
                         <div className='mt-6 flex flex-col items-center justify-center w-[90vw] md:w-[70vw] mb-12'>
-                            {/* // todo Make custom component for images based on data */}
                             {data.images.map((image, index) => {
                                 return (
                                     <img key={index} src={image} alt={name} className='max-w-[80vw] md:max-w-[60vw] mt-4' />

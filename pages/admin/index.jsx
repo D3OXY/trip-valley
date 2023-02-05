@@ -1,13 +1,13 @@
+import { collection, deleteDoc, doc, getDocs, orderBy, query } from "firebase/firestore"
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
+import { ImBin } from 'react-icons/im'
 import AuthCheck from '../../components/AuthCheck'
 import Footer from '../../components/Footer/Footer'
 import NavbarComponent from '../../components/Navbar/Navbar'
 import { useAuth } from '../../lib/AuthContext'
-import { ImBin } from 'react-icons/im'
-import { useRouter } from 'next/router'
 import { db, postToJSON } from "../../lib/firebase"
-import { collection, getDocs, doc, deleteDoc, query, orderBy } from "firebase/firestore"
 
 export async function getServerSideProps(context) {
     let resorts = []
@@ -98,7 +98,6 @@ async function handleDelete(id, section, router) {
     if (confirm) {
         const noteRef = doc(db, section, id);
         await deleteDoc(noteRef);
-        //reload page
         router.reload()
     }
 

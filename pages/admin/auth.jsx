@@ -1,6 +1,6 @@
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { useAuth } from "../../lib/AuthContext"
-import { useRouter } from 'next/router'
 
 function Auth() {
     const router = useRouter()
@@ -20,7 +20,6 @@ function Auth() {
         e.preventDefault()
         setLoading(true)
 
-        // Firebase email and password authentication
         try {
             await login(formData.email, formData.password)
             router.push('/admin')

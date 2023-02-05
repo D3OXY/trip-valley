@@ -12,9 +12,7 @@ function Footer() {
                 <a onClick={() => router.push('/packages')} className='m-6 text-[#C5FBD8] ' href="#">Packages</a>
                 <a onClick={() => router.push('/resorts')} className='m-6 text-[#C5FBD8] ' href="#">Resorts</a>
             </div>
-
             <div className="w-full border-t border-[#346769] "></div>
-
             <div className='flex flex-col md:flex-row items-center w-full mt-6'>
                 <h1 className='flex-1 text-left uppercase text-[#FFFFFF] font-Poppins font-semibold text-3xl '>Trip<span className='uppercase text-[#C5FBD8] '>VALLEY</span></h1>
                 <p className='flex-1 text-center text-[#909EA2] hover:text-[#08898F] hover:underline cursor-pointer ' onClick={() => { window.location.href = 'https://deoxy.dev' }} >© 2023 TRIPVALLEY</p>

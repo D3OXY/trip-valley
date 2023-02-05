@@ -1,5 +1,8 @@
 {
     "emmet.includeLanguages": {
         "postcss": "css"
-    }
+    },
+    "cSpell.words": [
+        "TRIPVALLEY"
+    ]
 }

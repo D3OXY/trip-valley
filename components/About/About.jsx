@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
     return (
-        <section id='#about'>
+        <section id='about'>
             <div className='mt-20 mb-20 flex flex-col md:flex-row'>
                 <div className='w-[100%] md:w-[50%]' >
                     <h2 className='font-Poppins font-bold text-underline'>About Us</h2>

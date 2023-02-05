@@ -1,9 +1,7 @@
-import { AuthContextProvider } from '../lib/AuthContext'
-import '../styles/globals.css'
-import "../styles/nprogress.css"
-import NProgress from 'nprogress';
-import Router from 'next/router';
 import dynamic from 'next/dynamic';
+import { AuthContextProvider } from '../lib/AuthContext';
+import '../styles/globals.css';
+import "../styles/nprogress.css";
 
 const TopProgressBar = dynamic(
   () => {

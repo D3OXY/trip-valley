@@ -25,8 +25,8 @@ function NavbarComponent() {
                 </div>
                 <div className=' w-[10%] md:w-[50%] hidden md:flex  justify-end items-center'>
                     <a onClick={() => router.push('/')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#home">Home</a>
-                    <a onClick={() => router.push('/packages')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Packages</a>
-                    <a onClick={() => router.push('/resorts')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Resorts</a>
+                    <a onClick={() => router.push('/packages')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#packages">Packages</a>
+                    <a onClick={() => router.push('/resorts')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#resorts">Resorts</a>
                     <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#about">About Us</a>
                     <a className='button font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ease-in-out duration-200' href="#" onClick={() => setShow(!show)} >Contact Us</a>
                     {show && <ContactPopup show={show} setShow={setShow} />}
@@ -46,8 +46,8 @@ function DropDown({ show, setShow }) {
     return (
         <div className='w-full bg-white ease-in-out duration-200 flex flex-col items-center justify-center'>
             <a onClick={() => router.push('/')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#home">Home</a>
-            <a onClick={() => router.push('/packages')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Packages</a>
-            <a onClick={() => router.push('/resorts')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#">Resorts</a>
+            <a onClick={() => router.push('/packages')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#packages">Packages</a>
+            <a onClick={() => router.push('/resorts')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#resorts">Resorts</a>
             <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#about">About Us</a>
             <a className='button font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ease-in-out duration-200' href="#" onClick={() => setShow(!show)}>Contact Us</a>
             {show && <ContactPopup show={show} setShow={setShow} />}

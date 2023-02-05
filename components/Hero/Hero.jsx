@@ -4,7 +4,7 @@ import { HiLocationMarker } from 'react-icons/hi'
 
 function Hero() {
     return (
-        <section id='#home'>
+        <section id='home'>
             <div className='hero w-[100%] h-[500px]'>
                 <div className='w-[100%] md:w-[50%] h-[100%] flex flex-col pt-[30px] md:pt-0 md:justify-center items-center'>
                     <p className='text-white mt-48 md:mt-0 mb-4 md:mb-0 font-Poppins font-normal text-center w-[300px]'>Those who sought heaven on earth were referred to as travelers by God.</p>

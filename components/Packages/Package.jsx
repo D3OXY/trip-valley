@@ -16,7 +16,7 @@ function Package() {
     }
 
     return (
-        <section id='#resort'>
+        <section id='packages'>
             <div className='mt-20 mb-20'>
                 <div className='' >
                     <h2 className='font-Poppins font-bold text-underline'>Our Packages</h2>

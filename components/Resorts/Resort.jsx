@@ -23,7 +23,6 @@ function Resort() {
                     <p className='font-Poppins font-normal mt-8 '>The Resorts We Offer</p>
                 </div>
                 <div className='flex justify-center items-center'>
-
                     <div className="card__container">
                         {resorts?.map((data, index) => {
                             if (index < 4) {
@@ -32,7 +31,6 @@ function Resort() {
                             return null;
                         })}
                         <Card data={{ name: "Explore All", thumbnail: "/card-bg.jfif" }} section="resorts" />
-
                     </div>
                 </div>
             </div>

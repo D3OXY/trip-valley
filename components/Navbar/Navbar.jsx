@@ -24,11 +24,11 @@ function NavbarComponent() {
                     {toggle ? <AiOutlineClose className='text-black text-4xl block md:hidden' onClick={() => { setToggle(!toggle) }} /> : <BiMenuAltRight className='text-black text-4xl block md:hidden' onClick={() => { setToggle(!toggle) }} />}
                 </div>
                 <div className=' w-[10%] md:w-[50%] hidden md:flex  justify-end items-center'>
-                    <a onClick={() => router.push('/')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#home">Home</a>
-                    <a onClick={() => router.push('/packages')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#packages">Packages</a>
-                    <a onClick={() => router.push('/resorts')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#resorts">Resorts</a>
-                    <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] ' href="#about">About Us</a>
-                    <a className='button font-Poppins font-normal text-[#FFFFFF] m-[5px] bg-[#08898F] p-2 rounded ease-in-out duration-200' href="#" onClick={() => setShow(!show)} >Contact Us</a>
+                    <a onClick={() => router.push('/')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] mx-2 ' href="#home">Home</a>
+                    <a onClick={() => router.push('/packages')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] mx-2 ' href="#packages">Packages</a>
+                    <a onClick={() => router.push('/resorts')} className='navItem font-Poppins font-normal text-[#000000] m-[5px] mx-2 ' href="#resorts">Resorts</a>
+                    <a className='navItem font-Poppins font-normal text-[#000000] m-[5px] mx-2 ' href="#about">About Us</a>
+                    <a className='button font-Poppins font-normal text-[#FFFFFF] m-[5px] mx-2 bg-[#08898F] p-2 rounded ease-in-out duration-200' href="#" onClick={() => setShow(!show)} >Contact Us</a>
                     {show && <ContactPopup show={show} setShow={setShow} />}
                 </div>
                 <div></div>

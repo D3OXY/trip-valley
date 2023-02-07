@@ -7,7 +7,6 @@ import { BiMenuAltRight } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
 import ContactPopup from '../ContactPopup';
 import { useRouter } from 'next/router'
-import Image from 'next/image';
 
 function NavbarComponent() {
     const router = useRouter()

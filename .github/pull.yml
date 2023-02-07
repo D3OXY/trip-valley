@@ -1,5 +1,5 @@
 version: "1"
 rules:
   - base: main
-    upstream: d3oxy:main
+    upstream: D3OXY:main
     mergeMethod: hardreset

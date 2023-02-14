@@ -12,6 +12,7 @@ import IncludesForm from "./IncludesForm";
 import PricesForm from "./PricesForm";
 const defaultData = {
     name: '',
+    location: '',
     description: '',
     thumbnail: '',
     checkin: '',
@@ -40,6 +41,7 @@ function CreatePage() {
         try {
             await addDoc(collection(db, 'resorts'), {
                 name: formData.name.toLowerCase().replace(/ /g, '-'),
+                location: formData.location,
                 description: formData.description,
                 thumbnail: formData.thumbnail,
                 checkin: formData.checkin,

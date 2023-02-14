@@ -20,6 +20,18 @@ function DataForm({ formData, setFormData }) {
             </div>
 
             <div className='flex flex-col m-2 items-start justify-center'>
+                <label htmlFor='location'>Location</label>
+                <input
+                    type='text'
+                    name='location'
+                    value={formData.location}
+                    onChange={handleChange}
+                    placeholder="Resort Name"
+                    className='border-2 border-gray-300 p-2 rounded-md m-2 w-full'
+                />
+            </div>
+
+            <div className='flex flex-col m-2 items-start justify-center'>
                 <label htmlFor='description'>Description</label>
                 <textarea
                     type='text'

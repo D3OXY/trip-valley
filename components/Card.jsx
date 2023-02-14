@@ -1,11 +1,13 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { SlLocationPin } from 'react-icons/sl';
 
 function Card({ data, section }) {
     const router = useRouter();
     const [hover, setHover] = useState(false);
     let name = data.name.replace(/-/g, ' ');
     name = name.charAt(0).toUpperCase() + name.slice(1);
+    let location = data.location
     return (
         <>
             <div
@@ -29,12 +31,15 @@ function Card({ data, section }) {
                     boxShadow: !hover ? "0 0 10px #ddd" : "0 0 10px black",
                     display: "flex",
                     alignItems: "flex-end",
-                    justifyContent: "flex-end",
+                    justifyContent: "flex-start",
                     padding: "10px",
                     transform: hover ? "scale(0.9)" : "scale(1)",
                     transition: "transform 0.3s ease-in-out"
                 }}>
-                <p className="m-0 font-Poppins font-bold text-xl text-white">{name}</p>
+                <div className="flex flex-col">
+                    <p className="m-0 font-Poppins font-bold text-xl text-white">{name}</p>
+                    {location && <p className="flex flex-row items-center m-0 font-Poppins font-bold text-xl text-white"><SlLocationPin />{location}</p>}
+                </div>
             </div>
         </>
     );

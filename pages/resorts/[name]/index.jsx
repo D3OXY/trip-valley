@@ -1,10 +1,10 @@
 import { collection, getDocs, orderBy, query, where } from 'firebase/firestore'
 import React, { useState } from 'react'
-import { Container } from 'react-bootstrap';
-import Footer from '../../../components/Footer/Footer';
-import NavbarComponent from '../../../components/Navbar/Navbar';
-import WhatsAppIcon from '../../../components/WhatsAppIcon';
-import { db, postToJSON } from '../../../lib/firebase';
+import { Container } from 'react-bootstrap'
+import Footer from '../../../components/Footer/Footer'
+import NavbarComponent from '../../../components/Navbar/Navbar'
+import WhatsAppIcon from '../../../components/WhatsAppIcon'
+import { db, postToJSON } from '../../../lib/firebase'
 
 
 export async function getStaticPaths() {
